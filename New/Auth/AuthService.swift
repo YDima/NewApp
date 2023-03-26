@@ -48,8 +48,6 @@ class AuthService: AuthServiceProtocol {
         } else {
             completion(.failure(AuthError.notMatching))
         }
-        
-        return
     }
     
     func register(username: String, password: String, completion: @escaping (Result<String, AuthError>) -> Void) {

@@ -95,53 +95,12 @@ class Keychain {
         ] as CFDictionary
         
         // Try updating the existing item first
-        var status = SecItemAdd(query, nil)
+        let status = SecItemAdd(query, nil)
         
         if status != errSecSuccess {
             print("Failed to save login to keychain")
         }
     }
-    
-    func savePassword(for username: String, _ password: String) {
-        let query = self.query(forKey: username)
-        let attributes: [CFString: Any] = [
-            kSecValueData: password.data(using: .utf8)!
-        ]
-        var result: CFTypeRef?
-        let status = SecItemUpdate(query as CFDictionary, attributes as CFDictionary)
-//        if status != errSecSuccess {
-//            var query = self.query(forKey: username)
-//            query[kSecValueData] = password.data(using: .utf8)!
-//            let status = SecItemAdd(query as CFDictionary, &result)
-//            if status != errSecSuccess {
-//                print("Failed to save password to keychain")
-//            }
-//        }
-    }
-    
-//    func login(for username: String) -> String? {
-//        var query = self.query(forKey: username)
-//        query[kSecReturnData] = true
-//        var result: AnyObject?
-//        let status = SecItemCopyMatching(query as CFDictionary, &result)
-//        if status == errSecSuccess, let data = result as? Data {
-//            return String(data: data, encoding: .utf8)
-//        } else {
-//            return nil
-//        }
-//    }
-//
-//    func password(for username: String) -> String? {
-//        var query = self.query(forKey: username)
-//        query[kSecReturnData] = true
-//        var result: AnyObject?
-//        let status = SecItemCopyMatching(query as CFDictionary, &result)
-//        if status == errSecSuccess, let data = result as? Data {
-//            return String(data: data, encoding: .utf8)
-//        } else {
-//            return nil
-//        }
-//    }
     
 }
 

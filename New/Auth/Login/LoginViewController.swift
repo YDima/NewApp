@@ -56,6 +56,9 @@ extension LoginViewController: LoginViewProtocol {
         let model = ProfileViewModel(username: login)
         let profileViewController = ProfileViewController(viewModel: model)
         
+        navigationItem.title = "Profile"
+        navigationItem.rightBarButtonItem = nil
+        
         self.navigationController?.viewControllers = [profileViewController]
     }
     
