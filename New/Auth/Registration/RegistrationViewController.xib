@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController" customModule="New" customModuleProvider="target">
+            <connections>
+                <outlet property="password" destination="ic0-hn-Fco" id="YSq-tW-uYG"/>
+                <outlet property="privacyPolicy" destination="oPe-do-l1C" id="UXP-xK-c3Y"/>
+                <outlet property="register" destination="NLC-0H-BFh" id="w4o-u5-gmK"/>
+                <outlet property="username" destination="Pk0-Yw-WtV" id="MuH-Lq-Xcd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UNC-8f-bff">
+                    <rect key="frame" x="64" y="384.66666666666669" width="265" height="83"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pk0-Yw-WtV">
+                            <rect key="frame" x="0.0" y="0.0" width="265" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" textContentType="username"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ic0-hn-Fco">
+                            <rect key="frame" x="0.0" y="49" width="265" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLC-0H-BFh">
+                    <rect key="frame" x="64" y="500.66666666666669" width="265" height="34.333333333333314"/>
+                    <color key="backgroundColor" red="0.92384676589179282" green="0.80515032328916492" blue="0.11123229202143776" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Register"/>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="By registering, you agree to Privacy Policy" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oPe-do-l1C">
+                    <rect key="frame" x="30" y="752" width="333" height="33"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="Mq4-wz-EBb"/>
+                        <constraint firstAttribute="width" constant="333" id="elt-qI-UrB"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="NLC-0H-BFh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1j8-cc-0k5"/>
+                <constraint firstItem="NLC-0H-BFh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="AKw-DM-tdD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UNC-8f-bff" secondAttribute="trailing" constant="64" id="EnS-GV-2HO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oPe-do-l1C" secondAttribute="bottom" constant="33" id="LCX-ZR-hYd"/>
+                <constraint firstItem="oPe-do-l1C" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="caG-gp-PCE"/>
+                <constraint firstItem="UNC-8f-bff" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="dBL-Tt-OUC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NLC-0H-BFh" secondAttribute="trailing" constant="64" id="eWX-Pm-M4T"/>
+                <constraint firstItem="UNC-8f-bff" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lVI-Su-7zx"/>
+                <constraint firstItem="UNC-8f-bff" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ygS-71-GjA"/>
+                <constraint firstItem="NLC-0H-BFh" firstAttribute="top" secondItem="UNC-8f-bff" secondAttribute="bottom" constant="33" id="z8I-6K-K6E"/>
+            </constraints>
+            <point key="canvasLocation" x="-22.137404580152669" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
